@@ -32,15 +32,28 @@ try:
     
     # TODO: Find and fill in the login form
     # Example (you'll need to inspect the page to get the correct element IDs):
-    # username_field = driver.find_element(By.ID, "username")
-    # password_field = driver.find_element(By.ID, "password")
-    # username_field.send_keys(username)
-    # password_field.send_keys(password)
-    # login_button = driver.find_element(By.ID, "login-button")
-    # login_button.click()
+
+    username_field = driver.find_element(By.ID, "input-user-name")
+    password_field = driver.find_element(By.ID, "input-password")
+
+    username_field.send_keys(username)
+    password_field.send_keys(password)
+
+    login_button = driver.find_element(By.ID, "login")
+
+    # Scroll to the button to make sure it's visible
+    driver.execute_script("arguments[0].scrollIntoView(true);", login_button)
+    time.sleep(2)  # Brief pause after scrolling
+    login_button.click()
+
+    time.sleep(2)
+
+    # Click the info button to close the info modal
+    driver.find_element(By.ID, "info-button-ok").click()
     
     # Wait for user to finish (press Enter to close)
     input("\nBrowser is open. Press Enter to close...")
+
     
 finally:
     # Close the browser
