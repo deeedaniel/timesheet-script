@@ -1,0 +1,31 @@
+Common Element Selectors:
+    # By ID
+    element = driver.find_element(By.ID, "username")
+
+    # By Name
+    element = driver.find_element(By.NAME, "email")
+
+    # By CSS Selector
+    element = driver.find_element(By.CSS_SELECTOR, ".submit-button")
+
+    # By XPath
+    element = driver.find_element(By.XPATH, "//button[@type='submit']")
+
+
+
+
+Common Actions
+    # Type text
+    element.send_keys("text here")
+
+    # Click
+    element.click()
+
+    # Clear existing text
+    element.clear()
+
+    # Get text content
+    text = element.text
+
+    # Submit a form
+    element.submit()

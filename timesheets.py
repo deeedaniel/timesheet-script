@@ -16,16 +16,16 @@ driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), opti
 
 try:
     # Go to a website (example: Google)
-    driver.get("https://www.google.com")
+    driver.get("https://www.etimesheets.ihss.ca.gov/login")
     
-    # Find the search box by its name attribute
-    search_box = driver.find_element(By.NAME, "q")
+    # # Find the search box by its name attribute
+    # search_box = driver.find_element(By.NAME, "q")
     
-    # Type something into it
-    search_box.send_keys("Hello, world!")
+    # # Type something into it
+    # search_box.send_keys("Hello, world!")
     
-    # Submit the form
-    search_box.submit()
+    # # Submit the form
+    # search_box.submit()
     
     # Wait for user to finish (press Enter to close)
     input("\nBrowser is open. Press Enter to close...")
