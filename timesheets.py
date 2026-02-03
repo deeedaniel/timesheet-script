@@ -50,6 +50,13 @@ try:
 
     # Click the info button to close the info modal
     driver.find_element(By.ID, "info-button-ok").click()
+
+    time.sleep(2)
+
+    driver.find_element(By.ID, "timecardEntry").click()
+
+    # Python Debugger
+    import pdb; pdb.set_trace()
     
     # Wait for user to finish (press Enter to close)
     input("\nBrowser is open. Press Enter to close...")
