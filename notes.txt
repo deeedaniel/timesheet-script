@@ -11,9 +11,6 @@ Common Element Selectors:
     # By XPath
     element = driver.find_element(By.XPATH, "//button[@type='submit']")
 
-
-
-
 Common Actions
     # Type text
     element.send_keys("text here")
@@ -29,3 +26,7 @@ Common Actions
 
     # Submit a form
     element.submit()
+
+TO-DO:
+- replace time.sleep() with a dynamic wait
+- make inputs such as hours, times, days work, to make script usable for anyone
